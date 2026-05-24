@@ -21,7 +21,7 @@
 }
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -10px rgba(70, 104, 181, 0.2);
+  box-shadow: 0 12px 24px -10px rgba(70, 104, 181, 0.2); 
 }
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }
