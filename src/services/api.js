@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useAuthStore } from '../context/authStore.js';
 
 const api = axios.create({
-  baseURL: 'https://libreria-backend-production-a083.up.railway.app/api',
+  baseURL: 'https://libreria-backend-production-67b3.up.railway.app/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
@@ -51,7 +51,7 @@ api.interceptors.response.use(
         const refreshToken = useAuthStore.getState().refreshToken;
         if (!refreshToken) throw new Error('No hay refresh token disponible.');
         const response = await axios.post(
-          'https://libreria-backend-production-a083.up.railway.app/api/auth/refresh',
+          'https://libreria-backend-production-67b3.up.railway.app/api/auth/refresh',
           { refreshToken }
         );
         const { accessToken, refreshToken: newRefreshToken, user } = response.data;
