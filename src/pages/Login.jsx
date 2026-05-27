@@ -69,7 +69,7 @@ export default function Login() {
             </button>
           </form>
           <div className="mt-8 pt-6 border-t border-slate-700/60">
-            <span className="block text-center text-xs text-slate-400 font-medium mb-3 uppercase tracking-wider">Acceso Rápido (Universidad)</span>
+            <span className="block text-center text-xs text-slate-400 font-medium mb-3 uppercase tracking-wider">Acceso Rápido</span>
             <div className="grid grid-cols-3 gap-2">
               <button onClick={() => handleQuickFill('admin@biblioteca.com', 'admin123')} className="px-2 py-2 bg-slate-900 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-medium rounded-xl transition-colors cursor-pointer">Admin</button>
               <button onClick={() => handleQuickFill('librarian@biblioteca.com', 'librarian123')} className="px-2 py-2 bg-slate-900 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-medium rounded-xl transition-colors cursor-pointer">Bibliotecario</button>

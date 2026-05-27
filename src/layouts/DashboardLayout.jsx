@@ -66,12 +66,14 @@ export default function DashboardLayout() {
             </div>
           </div>
           <button onClick={handleLogout} className="w-full flex items-center justify-center space-x-2 px-4 py-2.5 bg-red-950/30 hover:bg-red-900/40 text-red-200 border border-red-900/50 rounded-xl transition-colors text-sm font-medium">
-            <LogOut className="h-4 w-4" /><span>Cerrar Sesión</span>
+            <LogOut className="h-4 w-4" />
+            <span>Cerrar Sesión</span>
           </button>
         </div>
       </aside>
 
       {sidebarOpen && <div onClick={() => setSidebarOpen(false)} className="fixed inset-0 z-30 bg-slate-950/40 md:hidden"></div>}
+
       <main className="flex-1 overflow-x-hidden overflow-y-auto p-6 md:p-10">
         <div className="max-w-7xl mx-auto"><Outlet /></div>
       </main>
