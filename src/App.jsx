@@ -4,7 +4,7 @@ import { useAuthStore } from './context/authStore.js';
 import { ProtectedRoute } from './routes/ProtectedRoute.jsx';
 import DashboardLayout from './layouts/DashboardLayout.jsx';
 import Login from './pages/Login.jsx';
-import Dashboard from './pages/Dashboard.jsx';
+import HistoryPage from './pages/History.jsx';
 import Unauthorized from './pages/Unauthorized.jsx';
 
 export default function App() {
@@ -12,14 +12,14 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />} />
+        <Route path="/login" element={isAuthenticated ? <Navigate to="/history" replace /> : <Login />} />
         <Route element={<ProtectedRoute allowedRoles={['ADMIN', 'LIBRARIAN', 'CLIENT']} />}>
           <Route element={<DashboardLayout />}>
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/history" element={<HistoryPage />} />
             <Route path="/unauthorized" element={<Unauthorized />} />
           </Route>
         </Route>
-        <Route path="*" element={<Navigate to={isAuthenticated ? '/dashboard' : '/login'} replace />} />
+        <Route path="*" element={<Navigate to={isAuthenticated ? '/history' : '/login'} replace />} />
       </Routes>
     </BrowserRouter>
   );
